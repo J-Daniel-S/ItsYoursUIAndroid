@@ -14,8 +14,7 @@ Version=9.85
 Sub Class_Globals
 	Private Root As B4XView
 	Private xui As XUI
-	
-	Private Label1 As Label
+
 	Private WebView1 As B4XView
 	Private recordPanel As Panel
 	Private audioPanel As Panel
@@ -26,6 +25,11 @@ Sub Class_Globals
 	Private merchPanel As Panel
 	Private iyView As ImageView
 	Private LayoutHome As String
+	Private iYWebView As ImageView
+	Private webBackButton As Label
+	Private ytubeView As ImageView
+	Private faceView As ImageView
+	Private instaView As ImageView
 End Sub
 
 Public Sub Initialize
@@ -48,10 +52,6 @@ Private Sub iyView_Click
 			Root.LoadLayout("MainPageLayout")
 			LayoutHome = "MainPageLayout"
 	End Select
-End Sub
-
-Private Sub Label1_Click
-	Root.LoadLayout("MainPageLayout")
 End Sub
 
 Private Sub aboutPanel_Click
@@ -88,6 +88,29 @@ Private Sub donatePanel_Click
 End Sub
 
 Private Sub merchPanel_Click
+	Root.LoadLayout("WebView")
+'	WebView1.loadurl("https://www.itsyours.org/about-us/")
+End Sub
+
+Private Sub iYWebView_Click
+	Root.LoadLayout("MainPageLayout")
+End Sub
+
+Private Sub webBackButton_Click
+	xui.MsgboxAsync("Go back", "Back I Tell You!")
+End Sub
+
+Private Sub ytubeView_Click
+	Root.LoadLayout("WebView")
+'	WebView1.loadurl("https://www.itsyours.org/about-us/")
+End Sub
+
+Private Sub faceView_Click
+	Root.LoadLayout("WebView")
+'	WebView1.loadurl("https://www.itsyours.org/about-us/")
+End Sub
+
+Private Sub instaView_Click
 	Root.LoadLayout("WebView")
 '	WebView1.loadurl("https://www.itsyours.org/about-us/")
 End Sub

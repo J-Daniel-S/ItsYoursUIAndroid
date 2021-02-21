@@ -241,7 +241,7 @@ b4xmainpage,aboutpanel_click,1,0,51,54
 
 
 
-b4xmainpage,atestpanel_click,0,0,69,71
+b4xmainpage,atestpanel_click,1,0,69,72
 
 
 
@@ -249,35 +249,43 @@ b4xmainpage,audiopanel_click,0,0,61,63
 
 
 
-b4xmainpage,b4xpage_created,1,0,30,34
+b4xmainpage,b4xpage_created,1,0,34,38
 
 
 
-b4xmainpage,class_globals,0,0,8,23
+b4xmainpage,class_globals,0,0,8,27
 
 
 
-b4xmainpage,donatepanel_click,0,0,77,79
+b4xmainpage,donatepanel_click,1,0,79,82
 
 
 
-b4xmainpage,initialize,0,0,25,27
+b4xmainpage,faceview_click,1,0,102,105
 
 
 
-b4xmainpage,iyview_click,1,1,38,45
+b4xmainpage,initialize,0,0,29,31
 
 
 
-b4xmainpage,label1_click,1,0,47,49
+b4xmainpage,instaview_click,1,0,107,110
 
 
 
-b4xmainpage,merchpanel_click,0,0,81,83
+b4xmainpage,iyview_click,1,0,42,49
 
 
 
-b4xmainpage,recordpanel_click,1,1,56,59
+b4xmainpage,iywebview_click,1,0,89,91
+
+
+
+b4xmainpage,merchpanel_click,1,0,84,87
+
+
+
+b4xmainpage,recordpanel_click,1,0,56,59
 
 
 
@@ -285,7 +293,15 @@ b4xmainpage,videopanel_click,0,0,65,67
 
 
 
-b4xmainpage,vtestpanel_click,0,0,73,75
+b4xmainpage,vtestpanel_click,1,0,74,77
+
+
+
+b4xmainpage,webbackbutton_click,0,0,93,95
+
+
+
+b4xmainpage,ytubeview_click,1,0,97,100
 
 
 

@@ -3,7 +3,7 @@ package b4a.example;
 import anywheresoftware.b4a.BA;
 import anywheresoftware.b4a.pc.*;
 
-public class b4xmainpage_subs_0 {
+public class b4xmainpage_subs_1 {
 
 
 public static RemoteObject  _aboutpanel_click(RemoteObject __ref) throws Exception{
