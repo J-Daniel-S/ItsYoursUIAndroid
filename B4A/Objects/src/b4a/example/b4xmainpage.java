@@ -33,12 +33,11 @@ public class b4xmainpage extends B4AClass.ImplB4AClass implements BA.SubDelegato
 public anywheresoftware.b4a.keywords.Common __c = null;
 public anywheresoftware.b4a.objects.B4XViewWrapper _root = null;
 public anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
-public anywheresoftware.b4a.objects.B4XViewWrapper _webview1 = null;
+public anywheresoftware.b4a.objects.WebViewWrapper _webview1 = null;
 public anywheresoftware.b4a.objects.PanelWrapper _recordpanel = null;
 public anywheresoftware.b4a.objects.PanelWrapper _audiopanel = null;
 public anywheresoftware.b4a.objects.PanelWrapper _videopanel = null;
-public anywheresoftware.b4a.objects.PanelWrapper _atestpanel = null;
-public anywheresoftware.b4a.objects.PanelWrapper _vtestpanel = null;
+public anywheresoftware.b4a.objects.PanelWrapper _testpanel = null;
 public anywheresoftware.b4a.objects.PanelWrapper _donatepanel = null;
 public anywheresoftware.b4a.objects.PanelWrapper _merchpanel = null;
 public anywheresoftware.b4a.objects.ImageViewWrapper _iyview = null;
@@ -48,6 +47,7 @@ public anywheresoftware.b4a.objects.LabelWrapper _webbackbutton = null;
 public anywheresoftware.b4a.objects.ImageViewWrapper _ytubeview = null;
 public anywheresoftware.b4a.objects.ImageViewWrapper _faceview = null;
 public anywheresoftware.b4a.objects.ImageViewWrapper _instaview = null;
+public anywheresoftware.b4a.objects.PanelWrapper _backpanel = null;
 public b4a.example.main _main = null;
 public b4a.example.starter _starter = null;
 public b4a.example.b4xpages _b4xpages = null;
@@ -57,27 +57,19 @@ __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
 if (Debug.shouldDelegate(ba, "aboutpanel_click", false))
 	 {return ((String) Debug.delegate(ba, "aboutpanel_click", null));}
-RDebugUtils.currentLine=917504;
- //BA.debugLineNum = 917504;BA.debugLine="Private Sub aboutPanel_Click";
-RDebugUtils.currentLine=917505;
- //BA.debugLineNum = 917505;BA.debugLine="Root.LoadLayout(\"WebView\")";
+RDebugUtils.currentLine=851968;
+ //BA.debugLineNum = 851968;BA.debugLine="Private Sub aboutPanel_Click";
+RDebugUtils.currentLine=851969;
+ //BA.debugLineNum = 851969;BA.debugLine="Root.RemoveAllViews";
+__ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .RemoveAllViews();
+RDebugUtils.currentLine=851970;
+ //BA.debugLineNum = 851970;BA.debugLine="Root.LoadLayout(\"WebView\")";
 __ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("WebView",ba);
-RDebugUtils.currentLine=917507;
- //BA.debugLineNum = 917507;BA.debugLine="End Sub";
-return "";
-}
-public String  _atestpanel_click(b4a.example.b4xmainpage __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xmainpage";
-if (Debug.shouldDelegate(ba, "atestpanel_click", false))
-	 {return ((String) Debug.delegate(ba, "atestpanel_click", null));}
-RDebugUtils.currentLine=1179648;
- //BA.debugLineNum = 1179648;BA.debugLine="Private Sub aTestPanel_Click";
-RDebugUtils.currentLine=1179649;
- //BA.debugLineNum = 1179649;BA.debugLine="Root.LoadLayout(\"WebView\")";
-__ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("WebView",ba);
-RDebugUtils.currentLine=1179651;
- //BA.debugLineNum = 1179651;BA.debugLine="End Sub";
+RDebugUtils.currentLine=851971;
+ //BA.debugLineNum = 851971;BA.debugLine="WebView1.loadurl(\"https://www.itsyours.org/about-";
+__ref._webview1 /*anywheresoftware.b4a.objects.WebViewWrapper*/ .LoadUrl("https://www.itsyours.org/about-us/");
+RDebugUtils.currentLine=851972;
+ //BA.debugLineNum = 851972;BA.debugLine="End Sub";
 return "";
 }
 public String  _audiopanel_click(b4a.example.b4xmainpage __ref) throws Exception{
@@ -85,13 +77,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
 if (Debug.shouldDelegate(ba, "audiopanel_click", false))
 	 {return ((String) Debug.delegate(ba, "audiopanel_click", null));}
-RDebugUtils.currentLine=1048576;
- //BA.debugLineNum = 1048576;BA.debugLine="Private Sub audioPanel_Click";
-RDebugUtils.currentLine=1048577;
- //BA.debugLineNum = 1048577;BA.debugLine="xui.MsgboxAsync(\"Load audio record!\", \"Audio clic";
+RDebugUtils.currentLine=983040;
+ //BA.debugLineNum = 983040;BA.debugLine="Private Sub audioPanel_Click";
+RDebugUtils.currentLine=983041;
+ //BA.debugLineNum = 983041;BA.debugLine="xui.MsgboxAsync(\"Load audio record!\", \"Audio clic";
 __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .MsgboxAsync(ba,BA.ObjectToCharSequence("Load audio record!"),BA.ObjectToCharSequence("Audio clicked"));
-RDebugUtils.currentLine=1048578;
- //BA.debugLineNum = 1048578;BA.debugLine="End Sub";
+RDebugUtils.currentLine=983042;
+ //BA.debugLineNum = 983042;BA.debugLine="End Sub";
 return "";
 }
 public String  _b4xpage_created(b4a.example.b4xmainpage __ref,anywheresoftware.b4a.objects.B4XViewWrapper _root1) throws Exception{
@@ -114,6 +106,23 @@ RDebugUtils.currentLine=720900;
  //BA.debugLineNum = 720900;BA.debugLine="End Sub";
 return "";
 }
+public String  _backpanel_touch(b4a.example.b4xmainpage __ref,int _action,float _x,float _y) throws Exception{
+__ref = this;
+RDebugUtils.currentModule="b4xmainpage";
+if (Debug.shouldDelegate(ba, "backpanel_touch", false))
+	 {return ((String) Debug.delegate(ba, "backpanel_touch", new Object[] {_action,_x,_y}));}
+RDebugUtils.currentLine=9568256;
+ //BA.debugLineNum = 9568256;BA.debugLine="Private Sub backPanel_Touch (Action As Int, X As F";
+RDebugUtils.currentLine=9568257;
+ //BA.debugLineNum = 9568257;BA.debugLine="Root.RemoveAllViews";
+__ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .RemoveAllViews();
+RDebugUtils.currentLine=9568258;
+ //BA.debugLineNum = 9568258;BA.debugLine="Root.LoadLayout(\"MainPageLayout\")";
+__ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("MainPageLayout",ba);
+RDebugUtils.currentLine=9568259;
+ //BA.debugLineNum = 9568259;BA.debugLine="End Sub";
+return "";
+}
 public String  _class_globals(b4a.example.b4xmainpage __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
@@ -126,8 +135,8 @@ RDebugUtils.currentLine=589826;
  //BA.debugLineNum = 589826;BA.debugLine="Private xui As XUI";
 _xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
 RDebugUtils.currentLine=589828;
- //BA.debugLineNum = 589828;BA.debugLine="Private WebView1 As B4XView";
-_webview1 = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 589828;BA.debugLine="Private WebView1 As WebView";
+_webview1 = new anywheresoftware.b4a.objects.WebViewWrapper();
 RDebugUtils.currentLine=589829;
  //BA.debugLineNum = 589829;BA.debugLine="Private recordPanel As Panel";
 _recordpanel = new anywheresoftware.b4a.objects.PanelWrapper();
@@ -138,38 +147,38 @@ RDebugUtils.currentLine=589831;
  //BA.debugLineNum = 589831;BA.debugLine="Private videoPanel As Panel";
 _videopanel = new anywheresoftware.b4a.objects.PanelWrapper();
 RDebugUtils.currentLine=589832;
- //BA.debugLineNum = 589832;BA.debugLine="Private aTestPanel As Panel";
-_atestpanel = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 589832;BA.debugLine="Private testPanel As Panel";
+_testpanel = new anywheresoftware.b4a.objects.PanelWrapper();
 RDebugUtils.currentLine=589833;
- //BA.debugLineNum = 589833;BA.debugLine="Private vTestPanel As Panel";
-_vtestpanel = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=589834;
- //BA.debugLineNum = 589834;BA.debugLine="Private donatePanel As Panel";
+ //BA.debugLineNum = 589833;BA.debugLine="Private donatePanel As Panel";
 _donatepanel = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=589835;
- //BA.debugLineNum = 589835;BA.debugLine="Private merchPanel As Panel";
+RDebugUtils.currentLine=589834;
+ //BA.debugLineNum = 589834;BA.debugLine="Private merchPanel As Panel";
 _merchpanel = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=589836;
- //BA.debugLineNum = 589836;BA.debugLine="Private iyView As ImageView";
+RDebugUtils.currentLine=589835;
+ //BA.debugLineNum = 589835;BA.debugLine="Private iyView As ImageView";
 _iyview = new anywheresoftware.b4a.objects.ImageViewWrapper();
-RDebugUtils.currentLine=589837;
- //BA.debugLineNum = 589837;BA.debugLine="Private LayoutHome As String";
+RDebugUtils.currentLine=589836;
+ //BA.debugLineNum = 589836;BA.debugLine="Private LayoutHome As String";
 _layouthome = "";
-RDebugUtils.currentLine=589838;
- //BA.debugLineNum = 589838;BA.debugLine="Private iYWebView As ImageView";
+RDebugUtils.currentLine=589837;
+ //BA.debugLineNum = 589837;BA.debugLine="Private iYWebView As ImageView";
 _iywebview = new anywheresoftware.b4a.objects.ImageViewWrapper();
-RDebugUtils.currentLine=589839;
- //BA.debugLineNum = 589839;BA.debugLine="Private webBackButton As Label";
+RDebugUtils.currentLine=589838;
+ //BA.debugLineNum = 589838;BA.debugLine="Private webBackButton As Label";
 _webbackbutton = new anywheresoftware.b4a.objects.LabelWrapper();
-RDebugUtils.currentLine=589840;
- //BA.debugLineNum = 589840;BA.debugLine="Private ytubeView As ImageView";
+RDebugUtils.currentLine=589839;
+ //BA.debugLineNum = 589839;BA.debugLine="Private ytubeView As ImageView";
 _ytubeview = new anywheresoftware.b4a.objects.ImageViewWrapper();
-RDebugUtils.currentLine=589841;
- //BA.debugLineNum = 589841;BA.debugLine="Private faceView As ImageView";
+RDebugUtils.currentLine=589840;
+ //BA.debugLineNum = 589840;BA.debugLine="Private faceView As ImageView";
 _faceview = new anywheresoftware.b4a.objects.ImageViewWrapper();
-RDebugUtils.currentLine=589842;
- //BA.debugLineNum = 589842;BA.debugLine="Private instaView As ImageView";
+RDebugUtils.currentLine=589841;
+ //BA.debugLineNum = 589841;BA.debugLine="Private instaView As ImageView";
 _instaview = new anywheresoftware.b4a.objects.ImageViewWrapper();
+RDebugUtils.currentLine=589842;
+ //BA.debugLineNum = 589842;BA.debugLine="Private backPanel As Panel";
+_backpanel = new anywheresoftware.b4a.objects.PanelWrapper();
 RDebugUtils.currentLine=589843;
  //BA.debugLineNum = 589843;BA.debugLine="End Sub";
 return "";
@@ -179,13 +188,19 @@ __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
 if (Debug.shouldDelegate(ba, "donatepanel_click", false))
 	 {return ((String) Debug.delegate(ba, "donatepanel_click", null));}
-RDebugUtils.currentLine=1310720;
- //BA.debugLineNum = 1310720;BA.debugLine="Private Sub donatePanel_Click";
-RDebugUtils.currentLine=1310721;
- //BA.debugLineNum = 1310721;BA.debugLine="Root.LoadLayout(\"WebView\")";
+RDebugUtils.currentLine=1245184;
+ //BA.debugLineNum = 1245184;BA.debugLine="Private Sub donatePanel_Click";
+RDebugUtils.currentLine=1245185;
+ //BA.debugLineNum = 1245185;BA.debugLine="Root.RemoveAllViews";
+__ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .RemoveAllViews();
+RDebugUtils.currentLine=1245186;
+ //BA.debugLineNum = 1245186;BA.debugLine="Root.LoadLayout(\"WebView\")";
 __ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("WebView",ba);
-RDebugUtils.currentLine=1310723;
- //BA.debugLineNum = 1310723;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1245187;
+ //BA.debugLineNum = 1245187;BA.debugLine="WebView1.loadurl(\"https://www.itsyours.org/donate";
+__ref._webview1 /*anywheresoftware.b4a.objects.WebViewWrapper*/ .LoadUrl("https://www.itsyours.org/donate/");
+RDebugUtils.currentLine=1245188;
+ //BA.debugLineNum = 1245188;BA.debugLine="End Sub";
 return "";
 }
 public String  _faceview_click(b4a.example.b4xmainpage __ref) throws Exception{
@@ -193,13 +208,16 @@ __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
 if (Debug.shouldDelegate(ba, "faceview_click", false))
 	 {return ((String) Debug.delegate(ba, "faceview_click", null));}
-RDebugUtils.currentLine=9306112;
- //BA.debugLineNum = 9306112;BA.debugLine="Private Sub faceView_Click";
-RDebugUtils.currentLine=9306113;
- //BA.debugLineNum = 9306113;BA.debugLine="Root.LoadLayout(\"WebView\")";
+RDebugUtils.currentLine=1572864;
+ //BA.debugLineNum = 1572864;BA.debugLine="Private Sub faceView_Click";
+RDebugUtils.currentLine=1572865;
+ //BA.debugLineNum = 1572865;BA.debugLine="Root.LoadLayout(\"WebView\")";
 __ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("WebView",ba);
-RDebugUtils.currentLine=9306115;
- //BA.debugLineNum = 9306115;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1572866;
+ //BA.debugLineNum = 1572866;BA.debugLine="WebView1.loadurl(\"https://www.facebook.com/itsYou";
+__ref._webview1 /*anywheresoftware.b4a.objects.WebViewWrapper*/ .LoadUrl("https://www.facebook.com/itsYours.org/");
+RDebugUtils.currentLine=1572867;
+ //BA.debugLineNum = 1572867;BA.debugLine="End Sub";
 return "";
 }
 public String  _initialize(b4a.example.b4xmainpage __ref,anywheresoftware.b4a.BA _ba) throws Exception{
@@ -219,13 +237,16 @@ __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
 if (Debug.shouldDelegate(ba, "instaview_click", false))
 	 {return ((String) Debug.delegate(ba, "instaview_click", null));}
-RDebugUtils.currentLine=9371648;
- //BA.debugLineNum = 9371648;BA.debugLine="Private Sub instaView_Click";
-RDebugUtils.currentLine=9371649;
- //BA.debugLineNum = 9371649;BA.debugLine="Root.LoadLayout(\"WebView\")";
+RDebugUtils.currentLine=1638400;
+ //BA.debugLineNum = 1638400;BA.debugLine="Private Sub instaView_Click";
+RDebugUtils.currentLine=1638401;
+ //BA.debugLineNum = 1638401;BA.debugLine="Root.LoadLayout(\"WebView\")";
 __ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("WebView",ba);
-RDebugUtils.currentLine=9371651;
- //BA.debugLineNum = 9371651;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1638402;
+ //BA.debugLineNum = 1638402;BA.debugLine="WebView1.loadurl(\"https://www.instagram.com/iynon";
+__ref._webview1 /*anywheresoftware.b4a.objects.WebViewWrapper*/ .LoadUrl("https://www.instagram.com/iynonprofit/");
+RDebugUtils.currentLine=1638403;
+ //BA.debugLineNum = 1638403;BA.debugLine="End Sub";
 return "";
 }
 public String  _iyview_click(b4a.example.b4xmainpage __ref) throws Exception{
@@ -259,13 +280,16 @@ __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
 if (Debug.shouldDelegate(ba, "iywebview_click", false))
 	 {return ((String) Debug.delegate(ba, "iywebview_click", null));}
-RDebugUtils.currentLine=9043968;
- //BA.debugLineNum = 9043968;BA.debugLine="Private Sub iYWebView_Click";
-RDebugUtils.currentLine=9043969;
- //BA.debugLineNum = 9043969;BA.debugLine="Root.LoadLayout(\"MainPageLayout\")";
+RDebugUtils.currentLine=1376256;
+ //BA.debugLineNum = 1376256;BA.debugLine="Private Sub iYWebView_Click";
+RDebugUtils.currentLine=1376257;
+ //BA.debugLineNum = 1376257;BA.debugLine="Root.RemoveAllViews";
+__ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .RemoveAllViews();
+RDebugUtils.currentLine=1376258;
+ //BA.debugLineNum = 1376258;BA.debugLine="Root.LoadLayout(\"MainPageLayout\")";
 __ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("MainPageLayout",ba);
-RDebugUtils.currentLine=9043970;
- //BA.debugLineNum = 9043970;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1376259;
+ //BA.debugLineNum = 1376259;BA.debugLine="End Sub";
 return "";
 }
 public String  _merchpanel_click(b4a.example.b4xmainpage __ref) throws Exception{
@@ -273,13 +297,19 @@ __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
 if (Debug.shouldDelegate(ba, "merchpanel_click", false))
 	 {return ((String) Debug.delegate(ba, "merchpanel_click", null));}
-RDebugUtils.currentLine=1376256;
- //BA.debugLineNum = 1376256;BA.debugLine="Private Sub merchPanel_Click";
-RDebugUtils.currentLine=1376257;
- //BA.debugLineNum = 1376257;BA.debugLine="Root.LoadLayout(\"WebView\")";
+RDebugUtils.currentLine=1310720;
+ //BA.debugLineNum = 1310720;BA.debugLine="Private Sub merchPanel_Click";
+RDebugUtils.currentLine=1310721;
+ //BA.debugLineNum = 1310721;BA.debugLine="Root.RemoveAllViews";
+__ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .RemoveAllViews();
+RDebugUtils.currentLine=1310722;
+ //BA.debugLineNum = 1310722;BA.debugLine="Root.LoadLayout(\"WebView\")";
 __ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("WebView",ba);
-RDebugUtils.currentLine=1376259;
- //BA.debugLineNum = 1376259;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1310723;
+ //BA.debugLineNum = 1310723;BA.debugLine="WebView1.loadurl(\"https://www.itsyours.org/produc";
+__ref._webview1 /*anywheresoftware.b4a.objects.WebViewWrapper*/ .LoadUrl("https://www.itsyours.org/product/its-yours-t-shirt/");
+RDebugUtils.currentLine=1310724;
+ //BA.debugLineNum = 1310724;BA.debugLine="End Sub";
 return "";
 }
 public String  _recordpanel_click(b4a.example.b4xmainpage __ref) throws Exception{
@@ -287,16 +317,39 @@ __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
 if (Debug.shouldDelegate(ba, "recordpanel_click", false))
 	 {return ((String) Debug.delegate(ba, "recordpanel_click", null));}
-RDebugUtils.currentLine=983040;
- //BA.debugLineNum = 983040;BA.debugLine="Private Sub recordPanel_Click";
-RDebugUtils.currentLine=983041;
- //BA.debugLineNum = 983041;BA.debugLine="Root.LoadLayout(\"selectrecord\")";
+RDebugUtils.currentLine=917504;
+ //BA.debugLineNum = 917504;BA.debugLine="Private Sub recordPanel_Click";
+RDebugUtils.currentLine=917505;
+ //BA.debugLineNum = 917505;BA.debugLine="Root.RemoveAllViews";
+__ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .RemoveAllViews();
+RDebugUtils.currentLine=917506;
+ //BA.debugLineNum = 917506;BA.debugLine="Root.LoadLayout(\"selectrecord\")";
 __ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("selectrecord",ba);
-RDebugUtils.currentLine=983042;
- //BA.debugLineNum = 983042;BA.debugLine="LayoutHome = \"selectrecord\"";
+RDebugUtils.currentLine=917507;
+ //BA.debugLineNum = 917507;BA.debugLine="LayoutHome = \"selectrecord\"";
 __ref._layouthome /*String*/  = "selectrecord";
-RDebugUtils.currentLine=983043;
- //BA.debugLineNum = 983043;BA.debugLine="End Sub";
+RDebugUtils.currentLine=917508;
+ //BA.debugLineNum = 917508;BA.debugLine="End Sub";
+return "";
+}
+public String  _testpanel_click(b4a.example.b4xmainpage __ref) throws Exception{
+__ref = this;
+RDebugUtils.currentModule="b4xmainpage";
+if (Debug.shouldDelegate(ba, "testpanel_click", false))
+	 {return ((String) Debug.delegate(ba, "testpanel_click", null));}
+RDebugUtils.currentLine=9502720;
+ //BA.debugLineNum = 9502720;BA.debugLine="Private Sub testPanel_Click";
+RDebugUtils.currentLine=9502721;
+ //BA.debugLineNum = 9502721;BA.debugLine="Root.RemoveAllViews";
+__ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .RemoveAllViews();
+RDebugUtils.currentLine=9502722;
+ //BA.debugLineNum = 9502722;BA.debugLine="Root.LoadLayout(\"WebView\")";
+__ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("WebView",ba);
+RDebugUtils.currentLine=9502723;
+ //BA.debugLineNum = 9502723;BA.debugLine="WebView1.loadurl(\"https://www.itsyours.org/testim";
+__ref._webview1 /*anywheresoftware.b4a.objects.WebViewWrapper*/ .LoadUrl("https://www.itsyours.org/testimonies/");
+RDebugUtils.currentLine=9502724;
+ //BA.debugLineNum = 9502724;BA.debugLine="End Sub";
 return "";
 }
 public String  _videopanel_click(b4a.example.b4xmainpage __ref) throws Exception{
@@ -304,27 +357,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
 if (Debug.shouldDelegate(ba, "videopanel_click", false))
 	 {return ((String) Debug.delegate(ba, "videopanel_click", null));}
-RDebugUtils.currentLine=1114112;
- //BA.debugLineNum = 1114112;BA.debugLine="Private Sub videoPanel_Click";
-RDebugUtils.currentLine=1114113;
- //BA.debugLineNum = 1114113;BA.debugLine="xui.MsgboxAsync(\"Load video record!\", \"Video clic";
+RDebugUtils.currentLine=1048576;
+ //BA.debugLineNum = 1048576;BA.debugLine="Private Sub videoPanel_Click";
+RDebugUtils.currentLine=1048577;
+ //BA.debugLineNum = 1048577;BA.debugLine="xui.MsgboxAsync(\"Load video record!\", \"Video clic";
 __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .MsgboxAsync(ba,BA.ObjectToCharSequence("Load video record!"),BA.ObjectToCharSequence("Video clicked"));
-RDebugUtils.currentLine=1114114;
- //BA.debugLineNum = 1114114;BA.debugLine="End Sub";
-return "";
-}
-public String  _vtestpanel_click(b4a.example.b4xmainpage __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xmainpage";
-if (Debug.shouldDelegate(ba, "vtestpanel_click", false))
-	 {return ((String) Debug.delegate(ba, "vtestpanel_click", null));}
-RDebugUtils.currentLine=1245184;
- //BA.debugLineNum = 1245184;BA.debugLine="Private Sub vTestPanel_Click";
-RDebugUtils.currentLine=1245185;
- //BA.debugLineNum = 1245185;BA.debugLine="Root.LoadLayout(\"WebView\")";
-__ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("WebView",ba);
-RDebugUtils.currentLine=1245187;
- //BA.debugLineNum = 1245187;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1048578;
+ //BA.debugLineNum = 1048578;BA.debugLine="End Sub";
 return "";
 }
 public String  _webbackbutton_click(b4a.example.b4xmainpage __ref) throws Exception{
@@ -332,13 +371,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
 if (Debug.shouldDelegate(ba, "webbackbutton_click", false))
 	 {return ((String) Debug.delegate(ba, "webbackbutton_click", null));}
-RDebugUtils.currentLine=9109504;
- //BA.debugLineNum = 9109504;BA.debugLine="Private Sub webBackButton_Click";
-RDebugUtils.currentLine=9109505;
- //BA.debugLineNum = 9109505;BA.debugLine="xui.MsgboxAsync(\"Go back\", \"Back I Tell You!\")";
-__ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .MsgboxAsync(ba,BA.ObjectToCharSequence("Go back"),BA.ObjectToCharSequence("Back I Tell You!"));
-RDebugUtils.currentLine=9109506;
- //BA.debugLineNum = 9109506;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1441792;
+ //BA.debugLineNum = 1441792;BA.debugLine="Private Sub webBackButton_Click";
+RDebugUtils.currentLine=1441793;
+ //BA.debugLineNum = 1441793;BA.debugLine="WebView1.Back";
+__ref._webview1 /*anywheresoftware.b4a.objects.WebViewWrapper*/ .Back();
+RDebugUtils.currentLine=1441794;
+ //BA.debugLineNum = 1441794;BA.debugLine="End Sub";
 return "";
 }
 public String  _ytubeview_click(b4a.example.b4xmainpage __ref) throws Exception{
@@ -346,13 +385,16 @@ __ref = this;
 RDebugUtils.currentModule="b4xmainpage";
 if (Debug.shouldDelegate(ba, "ytubeview_click", false))
 	 {return ((String) Debug.delegate(ba, "ytubeview_click", null));}
-RDebugUtils.currentLine=9240576;
- //BA.debugLineNum = 9240576;BA.debugLine="Private Sub ytubeView_Click";
-RDebugUtils.currentLine=9240577;
- //BA.debugLineNum = 9240577;BA.debugLine="Root.LoadLayout(\"WebView\")";
+RDebugUtils.currentLine=1507328;
+ //BA.debugLineNum = 1507328;BA.debugLine="Private Sub ytubeView_Click";
+RDebugUtils.currentLine=1507329;
+ //BA.debugLineNum = 1507329;BA.debugLine="Root.LoadLayout(\"WebView\")";
 __ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("WebView",ba);
-RDebugUtils.currentLine=9240579;
- //BA.debugLineNum = 9240579;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1507330;
+ //BA.debugLineNum = 1507330;BA.debugLine="WebView1.loadurl(\"https://www.youtube.com/channel";
+__ref._webview1 /*anywheresoftware.b4a.objects.WebViewWrapper*/ .LoadUrl("https://www.youtube.com/channel/UC41X0QO8aeiP5ClWoXhkeRQ");
+RDebugUtils.currentLine=1507331;
+ //BA.debugLineNum = 1507331;BA.debugLine="End Sub";
 return "";
 }
 }

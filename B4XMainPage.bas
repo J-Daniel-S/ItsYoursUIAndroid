@@ -15,12 +15,11 @@ Sub Class_Globals
 	Private Root As B4XView
 	Private xui As XUI
 
-	Private WebView1 As B4XView
+	Private WebView1 As WebView
 	Private recordPanel As Panel
 	Private audioPanel As Panel
 	Private videoPanel As Panel
-	Private aTestPanel As Panel
-	Private vTestPanel As Panel
+	Private testPanel As Panel
 	Private donatePanel As Panel
 	Private merchPanel As Panel
 	Private iyView As ImageView
@@ -30,6 +29,7 @@ Sub Class_Globals
 	Private ytubeView As ImageView
 	Private faceView As ImageView
 	Private instaView As ImageView
+	Private backPanel As Panel
 End Sub
 
 Public Sub Initialize
@@ -55,11 +55,13 @@ Private Sub iyView_Click
 End Sub
 
 Private Sub aboutPanel_Click
+	Root.RemoveAllViews
 	Root.LoadLayout("WebView")
-'	WebView1.loadurl("https://www.itsyours.org/about-us/")
+	WebView1.loadurl("https://www.itsyours.org/about-us/")
 End Sub
 
 Private Sub recordPanel_Click
+	Root.RemoveAllViews
 	Root.LoadLayout("selectrecord")
 	LayoutHome = "selectrecord"
 End Sub
@@ -72,45 +74,49 @@ Private Sub videoPanel_Click
 	xui.MsgboxAsync("Load video record!", "Video clicked")
 End Sub
 
-Private Sub aTestPanel_Click
+Private Sub testPanel_Click
+	Root.RemoveAllViews
 	Root.LoadLayout("WebView")
-'	WebView1.loadurl("https://www.itsyours.org/about-us/")
-End Sub
-
-Private Sub vTestPanel_Click
-	Root.LoadLayout("WebView")
-'	WebView1.loadurl("https://www.itsyours.org/about-us/")
+	WebView1.loadurl("https://www.itsyours.org/testimonies/")
 End Sub
 
 Private Sub donatePanel_Click
+	Root.RemoveAllViews
 	Root.LoadLayout("WebView")
-'	WebView1.loadurl("https://www.itsyours.org/about-us/")
+	WebView1.loadurl("https://www.itsyours.org/donate/")
 End Sub
 
 Private Sub merchPanel_Click
+	Root.RemoveAllViews
 	Root.LoadLayout("WebView")
-'	WebView1.loadurl("https://www.itsyours.org/about-us/")
+	WebView1.loadurl("https://www.itsyours.org/product/its-yours-t-shirt/")
 End Sub
 
 Private Sub iYWebView_Click
+	Root.RemoveAllViews
 	Root.LoadLayout("MainPageLayout")
 End Sub
 
 Private Sub webBackButton_Click
-	xui.MsgboxAsync("Go back", "Back I Tell You!")
+	WebView1.Back
 End Sub
 
 Private Sub ytubeView_Click
 	Root.LoadLayout("WebView")
-'	WebView1.loadurl("https://www.itsyours.org/about-us/")
+	WebView1.loadurl("https://www.youtube.com/channel/UC41X0QO8aeiP5ClWoXhkeRQ")
 End Sub
 
 Private Sub faceView_Click
 	Root.LoadLayout("WebView")
-'	WebView1.loadurl("https://www.itsyours.org/about-us/")
+	WebView1.loadurl("https://www.facebook.com/itsYours.org/")
 End Sub
 
 Private Sub instaView_Click
 	Root.LoadLayout("WebView")
-'	WebView1.loadurl("https://www.itsyours.org/about-us/")
+	WebView1.loadurl("https://www.instagram.com/iynonprofit/")
+End Sub
+
+Private Sub backPanel_Touch (Action As Int, X As Float, Y As Float)
+	Root.RemoveAllViews
+	Root.LoadLayout("MainPageLayout")
 End Sub

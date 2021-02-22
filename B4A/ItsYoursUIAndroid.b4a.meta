@@ -7,6 +7,6 @@ ModuleBreakpoints2=
 ModuleClosedNodes0=1,2,6
 ModuleClosedNodes1=
 ModuleClosedNodes2=1
-NavigationStack=B4XMainPage,iyView_Click,45,0,B4XMainPage,webBackButton_Click,91,6,B4XMainPage,iYWebView_Click,88,0,B4XMainPage,merchPanel_Click,84,0,B4XMainPage,ytubeView_Click,97,0,B4XMainPage,faceView_Click,102,0,B4XMainPage,instaView_Click,107,0,Visual Designer,mainpagelayout.bal,-100,6,Visual Designer,webview.bal,-100,6,B4XMainPage,Class_Globals,23,6
+NavigationStack=B4XMainPage,webBackButton_Click,88,2,B4XMainPage,Class_Globals,26,1,B4XMainPage,backPanel_Touch,108,0,B4XMainPage,iYWebView_Click,84,1,B4XMainPage,merchPanel_Click,79,0,B4XMainPage,donatePanel_Click,74,0,B4XMainPage,testPanel_Click,69,0,B4XMainPage,videoPanel_Click,64,0,B4XMainPage,recordPanel_Click,56,0,B4XMainPage,aboutPanel_Click,51,0,B4XMainPage,Initialize,29,0
 SelectedBuild=0
 VisibleModules=1
